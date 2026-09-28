@@ -56,6 +56,39 @@ void main() {
   describePet(name: 'Петька', species: 'Попугай', age: 1);
   repeat('ха');
   repeat('ха', 3);
+
+  // Условия
+  int score2 = 85;
+  String grade;
+  if (score2 >= 90) {
+    grade = 'A';
+  } else if (score2 >= 75) {
+    grade = 'B';
+  } else {
+    grade = 'C';
+  }
+  print(grade);
+  String result = score >= 60 ? 'Сдал' : 'Не сдал';
+  print(result);
+
+  // циклы
+  for (int i = 0; i < 5; i++){
+    print(i);
+  }
+
+  // switch
+  String day = 'Пн';
+  switch (day) {
+    case 'Сб':
+    case 'Вс':
+      print('Выходной');
+      break;
+    case 'Пн':
+      print('Начало недели');
+      break;
+    default:
+      print('Рабочий день');
+  }
 }
 
 String greet(String name) => 'Привет, $name!';
