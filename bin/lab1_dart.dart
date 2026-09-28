@@ -47,4 +47,33 @@ void main() {
   for (var fruit in fruits2) {
     print(fruit);
   }
+  // функции
+  print(greet('Артём'));
+  print(square(4));
+  print(half(8.4));
+  describePet(name: 'Дружок', age: 5, species: 'Собака');
+  describePet(age: 8, name: 'Барсик');
+  describePet(name: 'Петька', species: 'Попугай', age: 1);
+  repeat('ха');
+  repeat('ха', 3);
+}
+
+String greet(String name) => 'Привет, $name!';
+int square(int x) => x * x;
+double half(double x) => x / 2;
+
+void describePet({
+  required String name,
+  String species = 'Кот',
+  int age = 0,
+}) {
+  print('$name - $species, возраст $age');
+}
+
+String repeat(String text, [int times = 2]) {
+  String result = '';
+  for (int i = 0; i < times; i++) {
+    result += text;
+  }
+  return result;
 }
